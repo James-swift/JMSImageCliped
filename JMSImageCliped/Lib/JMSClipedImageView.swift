@@ -61,10 +61,7 @@ public class JMSClipedImageView: UIImageView {
                 if (objc_getAssociatedObject(tempImage, kProcessedImage) as? String ?? "0") != "1" {
                     self.layoutIfNeeded()
 
-                    let newImage = tempImage.jms_rc_clipToSize(targetSize: self.bounds.size, backgroundColor: nil, cornerRadius: self.cornerRadius, rectCornerType: self.rectCornerType, borderWidth: self.borderWidth, borderColor: self.borderColor, borderPathWidth: 4, borderPathColor: .red, isEqualScale: false, isCircle: false)
-                    
-//                    let newImage = tempImage.jms_rc_clipToSize(targetSize: self.bounds.size, backgroundColor: nil, cornerRadius: self.cornerRadius, rectCornerType: self.rectCornerType, borderWidth: self.borderWidth, borderColor: self.borderColor, isEqualScale: false, isCircle: false)
-
+                    let newImage = tempImage.jms_rc_clipToSize(targetSize: self.bounds.size, backgroundColor: nil, cornerRadius: self.cornerRadius, rectCornerType: self.rectCornerType, borderWidth: self.borderWidth, borderColor: self.borderColor, isEqualScale: false, isCircle: false)
                     
                     if newImage != nil {
                         objc_setAssociatedObject(newImage, kProcessedImage, "1", .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
