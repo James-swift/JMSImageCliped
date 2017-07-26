@@ -1,0 +1,6 @@
+framework module Pods_Shows_JMSImageCliped {
+  umbrella header "Pods-Shows-JMSImageCliped-umbrella.h"
+
+  export *
+  module * { export * }
+}

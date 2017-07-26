@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JMSImageCliped/Lib/UIImage+JMSImageCliped.swift"
+            timestampString = "522754577.529248"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "jms_rc_clipToSize(targetSize:backgroundColor:cornerRadius:rectCornerType:borderWidth:borderColor:borderPathWidth:borderPathColor:isEqualScale:isCircle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JMSImageCliped/Lib/UIImage+JMSImageCliped.swift"
+            timestampString = "522756010.865152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "jms_rc_clipToSize(targetSize:backgroundColor:cornerRadius:rectCornerType:borderWidth:borderColor:borderPathWidth:borderPathColor:isEqualScale:isCircle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JMSImageCliped/Lib/UIImage+JMSImageCliped.swift"
+            timestampString = "522756010.865152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "jms_rc_clipToSize(targetSize:backgroundColor:cornerRadius:rectCornerType:borderWidth:borderColor:borderPathWidth:borderPathColor:isEqualScale:isCircle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

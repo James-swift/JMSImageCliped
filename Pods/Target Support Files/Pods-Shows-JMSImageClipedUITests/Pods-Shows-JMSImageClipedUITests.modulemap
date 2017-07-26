@@ -1,0 +1,6 @@
+framework module Pods_Shows_JMSImageClipedUITests {
+  umbrella header "Pods-Shows-JMSImageClipedUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
