@@ -23,27 +23,27 @@ public extension UIView {
     public func jms_rc_setImage(fillElement: Any, backgroundColor: UIColor? = nil, cornerRadius: CGFloat = 0, rectCornerType: UIRectCorner = .allCorners,  borderWidth: CGFloat = 0, borderColor: UIColor = .clear) {
         self.layoutIfNeeded()
         self.backgroundColor = backgroundColor
-        
         let tempToSize = self.bounds.size
-        var image: UIImage?
-        var isCliped: Bool = false
-        
-        if let tempString = fillElement as? String {
-            image = UIImage.init(named: tempString)
-        }else if let tempImage = fillElement as? UIImage {
-            image = tempImage
-        }else if let tempData = fillElement as? Data {
-            image = UIImage.init(data: tempData)
-        }else if let tempColor = fillElement as? UIColor {
-            isCliped = true
-            image = UIImage.jms_rc_image(fillColor: tempColor, toSize: tempToSize, cornerRadius: cornerRadius, rectCornerType: rectCornerType, borderWidth: borderWidth, borderColor: borderColor)
-        }
-        
-        if !isCliped {
-            image = image?.jms_rc_clipToSize(targetSize: tempToSize, backgroundColor: backgroundColor, cornerRadius: cornerRadius, rectCornerType: rectCornerType, borderWidth: borderWidth, borderColor: borderColor, isEqualScale: false, isCircle: false)
-        }
-        
+
         DispatchQueue.global().async { [weak self] in
+            var image: UIImage?
+            var isCliped: Bool = false
+            
+            if let tempString = fillElement as? String {
+                image = UIImage.init(named: tempString)
+            }else if let tempImage = fillElement as? UIImage {
+                image = tempImage
+            }else if let tempData = fillElement as? Data {
+                image = UIImage.init(data: tempData)
+            }else if let tempColor = fillElement as? UIColor {
+                isCliped = true
+                image = UIImage.jms_rc_image(fillColor: tempColor, toSize: tempToSize, cornerRadius: cornerRadius, rectCornerType: rectCornerType, borderWidth: borderWidth, borderColor: borderColor)
+            }
+            
+            if !isCliped {
+                image = image?.jms_rc_clipToSize(targetSize: tempToSize, backgroundColor: backgroundColor, cornerRadius: cornerRadius, rectCornerType: rectCornerType, borderWidth: borderWidth, borderColor: borderColor, isEqualScale: false, isCircle: false)
+            }
+            
             self?.updContentInMainThread(image)
         }
     }

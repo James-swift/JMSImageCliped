@@ -101,8 +101,8 @@ class ViewController: UIViewController {
             make.size.equalTo(CGSize.init(width: 80, height: 30))
         }
         
-        //        self.btn.jms_rc_setImage(fillColor: UIColor.groupTableViewBackground, cornerRadius: 15, borderWidth: 1, borderColor: UIColor.green, rectCornerType: .allCorners)
-        self.btn.jms_rc_setBtnImage(fillStateElements: [UIControlState.normal.rawValue: UIColor.red, UIControlState.highlighted.rawValue: UIColor.green], cornerRadius: 15)
+        self.btn.setTitle("测试", for: .normal)
+        self.btn.jms_rc_setBtnImage(fillStateElements:  [(UIControlState.normal, UIColor.red, true), (UIControlState.highlighted, UIColor.green, true)], cornerRadius: 15)
         
         /// 网络图片
         self.view.addSubview(self.networkImageView)
