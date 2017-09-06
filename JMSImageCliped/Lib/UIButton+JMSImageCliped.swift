@@ -27,6 +27,12 @@ public extension UIButton {
         self.backgroundColor = backgroundColor
         
         for (state, item, isBackgroundImage) in fillStateElements {
+            if isBackgroundImage {
+                self.setBackgroundImage(nil, for: state)
+            }else {
+                self.setImage(nil, for: state)
+            }
+            
             DispatchQueue.global().async { [weak self] in
                 var image: UIImage?
                 var isCliped: Bool = false

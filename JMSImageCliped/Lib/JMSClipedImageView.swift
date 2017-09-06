@@ -15,10 +15,10 @@ public class JMSClipedImageView: UIImageView {
 
     private(set) var hadAddObserver: Bool   = false
 
-    public var cornerRadius: CGFloat        = 0
-    public var rectCornerType: UIRectCorner = .allCorners
-    public var borderWidth: CGFloat         = 0
-    public var borderColor: UIColor         = .clear
+    public var jms_cornerRadius: CGFloat        = 0
+    public var jms_rectCornerType: UIRectCorner = .allCorners
+    public var jms_borderWidth: CGFloat         = 0
+    public var jms_borderColor: UIColor         = .clear
 
     /// 生成指定图片来填充控件
     ///
@@ -33,11 +33,11 @@ public class JMSClipedImageView: UIImageView {
     public init(frame: CGRect = .zero, cornerRadius: CGFloat = 0, backgroundColor: UIColor? = nil, borderWidth: CGFloat = 0, borderColor: UIColor = .clear, rectCornerType: UIRectCorner = .allCorners) {
         super.init(frame: frame)
         
-        self.backgroundColor    = backgroundColor
-        self.cornerRadius       = cornerRadius
-        self.borderWidth        = borderWidth
-        self.borderColor        = borderColor
-        self.rectCornerType     = rectCornerType
+        self.backgroundColor        = backgroundColor
+        self.jms_cornerRadius       = cornerRadius
+        self.jms_borderWidth        = borderWidth
+        self.jms_borderColor        = borderColor
+        self.jms_rectCornerType     = rectCornerType
 
         if !self.hadAddObserver {
             /// kvo
@@ -61,7 +61,7 @@ public class JMSClipedImageView: UIImageView {
                 if (objc_getAssociatedObject(tempImage, kProcessedImage) as? String ?? "0") != "1" {
                     self.layoutIfNeeded()
 
-                    let newImage = tempImage.jms_rc_clipToSize(targetSize: self.bounds.size, backgroundColor: nil, cornerRadius: self.cornerRadius, rectCornerType: self.rectCornerType, borderWidth: self.borderWidth, borderColor: self.borderColor, isEqualScale: false, isCircle: false)
+                    let newImage = tempImage.jms_rc_clipToSize(targetSize: self.bounds.size, backgroundColor: nil, cornerRadius: self.jms_cornerRadius, rectCornerType: self.jms_rectCornerType, borderWidth: self.jms_borderWidth, borderColor: self.jms_borderColor, isEqualScale: false, isCircle: false)
                     
                     if newImage != nil {
                         objc_setAssociatedObject(newImage, kProcessedImage, "1", .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
