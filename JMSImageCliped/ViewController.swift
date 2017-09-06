@@ -80,6 +80,7 @@ class ViewController: UIViewController {
         }
         
         self.snpkitLabel.jms_rc_setImage(fillElement: UIColor.groupTableViewBackground, cornerRadius: 15, borderWidth: 1, borderColor: .black)
+        self.snpkitLabel.textColor = UIColor.blue
         self.snpkitLabel.text = "Label圆角"
         
         /// UIImageView
