@@ -47,7 +47,13 @@ public class JMSClipedImageView: UIImageView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
+        if !self.hadAddObserver {
+            /// kvo
+            self.addObserver(self, forKeyPath: jms_def_Image, options: .new, context: nil)
+            self.hadAddObserver = true
+        }
     }
     
     deinit {
